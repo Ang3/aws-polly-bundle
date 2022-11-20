@@ -72,8 +72,8 @@ class MyService
 }
 ```
 
-Polly speech synthesizer
-------------------------
+Speech synthesizer
+------------------
 
 To synthesize a speech, use dependency injection:
 
