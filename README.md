@@ -39,12 +39,15 @@ In file `.env`, add the contents below and adapt it to your needs:
 ###> ang3/aws-polly-bundle ###
 AWS_POLLY_KEY="YOUR_KEY"
 AWS_POLLY_SECRET="YOUR_SECRET"
-AWS_POLLY_REGION="YOUR_REGION"
+AWS_POLLY_DEFAULT_REGION="DEFAULT_REGION"
+AWS_POLLY_DEFAULT_ENGINE="standard" # Update by "neural" if you want more realistic voices
 AWS_POLLY_VERSION="2016-06-10"
 ###< ang3/aws-polly-bundle ###
 ```
 
-Make sure to replace `YOUR_KEY`, `YOUR_SECRET`, `YOUR_REGION` by your AWS settings.
+Make sure to replace `YOUR_KEY`, `YOUR_SECRET` and `DEFAULT_REGION` by your AWS settings.
+
+**Be aware some voices are available only on specific regions or engine. Please refer to the AWS documentation.**
 
 Usage
 =====

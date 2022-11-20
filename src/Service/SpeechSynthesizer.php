@@ -7,7 +7,9 @@ use InvalidArgumentException;
 
 class SpeechSynthesizer
 {
-    public function __construct(private PollyClient $pollyClient)
+    public function __construct(private PollyClient $pollyClient,
+                                private string $defaultRegion,
+                                private string $defaultEngine)
     {
     }
 
@@ -18,17 +20,8 @@ class SpeechSynthesizer
      */
     public function create(string $text, string $voice, string $engine = null, string $region = null): string
     {
-        $region = $region ?: Voices::getDefaultRegion($voice);
-
-        if (!$region) {
-            throw new InvalidArgumentException(sprintf('No region found for the voice "%s"', $voice));
-        }
-
-        $engine = $engine ?: Voices::getDefaultEngine($voice);
-
-        if (!$engine) {
-            throw new InvalidArgumentException(sprintf('No engine found for the voice "%s"', $voice));
-        }
+        $region = $region ?: (Voices::getDefaultRegion($voice) ?: $this->defaultRegion);
+        $engine = $engine ?: (Voices::getDefaultEngine($voice) ?: $this->defaultEngine);
 
         return $this->pollyClient->createSynthesizeSpeechPreSignedUrl([
             'Text' => $text,

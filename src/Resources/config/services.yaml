@@ -20,3 +20,9 @@ services:
   ang3.aws_polly.client:
     alias: Aws\Polly\PollyClient
     public: true
+
+  # Speech synthesizer
+  Ang3\Bundle\AwsPollyBundle\Service\SpeechSynthesizer:
+    arguments:
+      $defaultRegion: '%env(AWS_POLLY_DEFAULT_REGION)%'
+      $defaultEngine: '%env(AWS_POLLY_DEFAULT_ENGINE)%'
