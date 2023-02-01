@@ -7,7 +7,8 @@ AWS Polly bundle
 [![Latest Unstable Version](https://poser.pugx.org/ang3/aws-polly-bundle/v/unstable)](https://packagist.org/packages/ang3/aws-polly-bundle)
 [![Total Downloads](https://poser.pugx.org/ang3/aws-polly-bundle/downloads)](https://packagist.org/packages/ang3/aws-polly-bundle)
 
-This bundle integrates AWS Polly to your project.
+This bundle integrates AWS Polly to your project. It installs the AWS SDK for PHP for the client 
+and the AsyncAws Bundle for credentials.
 
 **Features**
 
@@ -38,15 +39,13 @@ In file `.env`, add the contents below and adapt it to your needs:
 
 ```dotenv
 ###> ang3/aws-polly-bundle ###
-AWS_POLLY_KEY="YOUR_KEY"
-AWS_POLLY_SECRET="YOUR_SECRET"
 AWS_POLLY_DEFAULT_REGION="DEFAULT_REGION"
 AWS_POLLY_DEFAULT_ENGINE="standard" # Update by "neural" if you want more realistic voices
 AWS_POLLY_VERSION="2016-06-10"
 ###< ang3/aws-polly-bundle ###
 ```
 
-Make sure to replace `YOUR_KEY`, `YOUR_SECRET` and `DEFAULT_REGION` by your AWS settings.
+Make sure to replace `DEFAULT_REGION` by your AWS settings.
 
 **Be aware some voices are available only on specific regions or engine. Please refer to the AWS documentation.**
 
@@ -75,6 +74,8 @@ class MyService
 
 Speech synthesizer
 ------------------
+
+**Public service ID:** `ang3.aws_polly.speech_synthesizer`
 
 To synthesize a speech, use dependency injection:
 
