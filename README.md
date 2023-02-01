@@ -36,17 +36,16 @@ of the Composer documentation.
 Step 2: Configure the bundle
 ----------------------------
 
-In file `.env`, add the contents below and adapt it to your needs:
+Create the file `config/packages/ang3_aws_polly.yaml`, and add the contents below:
 
-```dotenv
-###> ang3/aws-polly-bundle ###
-AWS_POLLY_DEFAULT_REGION="DEFAULT_REGION"
-AWS_POLLY_DEFAULT_ENGINE="standard" # Update by "neural" if you want more realistic voices
-AWS_POLLY_VERSION="2016-06-10"
+```yaml
+# config/packages/ang3_aws_polly.yaml
+ang3_aws_polly:
+  region: 'YOUR_REGION'
 ###< ang3/aws-polly-bundle ###
 ```
 
-Make sure to replace `DEFAULT_REGION` by your AWS settings.
+Make sure to replace `YOUR_REGION` by your AWS settings.
 
 **Be aware some voices are available only on specific regions or engine. Please refer to the AWS documentation.**
 
@@ -96,9 +95,11 @@ class MyService
 Then, synthesize a speech with your text (mp3):
 
 ```php
+use Ang3\Bundle\AwsPollyBundle\Enum\Voice;
+
 /** @var \Ang3\Bundle\AwsBundle\Service\SpeechSynthesizer $speechSynthesizer */
 
-$audioFileUrl = $speechSynthesizer->create('Hello world!', 'Amy');
+$audioFileUrl = $speechSynthesizer->create('Hello world!', Voice::AMY);
 ```
 
 The function returns a secured URL to the MP3 file.
