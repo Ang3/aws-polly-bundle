@@ -24,7 +24,7 @@ jobs:
         run: |
           cd app
           composer config repositories.bundle path "../bundle"
-          composer update
+          composer config minimum-stability dev
           composer require ang3/aws-polly-bundle "*"
           cd ..
       - name: Clear cache
