@@ -17,7 +17,7 @@ jobs:
       - name: Create new project
         run: |
           mkdir bundle
-          mv ./* bundle/*
+          mv ./* bundle
           composer create-project symfony/skeleton:"6.2.*" app
       - name: Bundle installation
         run: |
