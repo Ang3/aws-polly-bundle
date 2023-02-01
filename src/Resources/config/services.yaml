@@ -15,8 +15,8 @@ services:
         version: '%env(resolve:AWS_POLLY_VERSION)%'
         region: '%env(resolve:AWS_POLLY_REGION)%'
         credentials:
-          key: '%env(resolve:AWS_POLLY_KEY)%'
-          secret: '%env(resolve:AWS_POLLY_SECRET)%'
+          key: '%env(AWS_ACCESS_KEY_ID)%'
+          secret: '%env(AWS_SECRET_ACCESS_KEY)%'
   ang3.aws_polly.client:
     alias: Aws\Polly\PollyClient
     public: true
