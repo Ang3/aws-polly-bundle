@@ -26,3 +26,6 @@ services:
     arguments:
       $defaultRegion: '%env(AWS_POLLY_DEFAULT_REGION)%'
       $defaultEngine: '%env(AWS_POLLY_DEFAULT_ENGINE)%'
+  ang3.aws_polly.speech_synthesizer:
+    alias: Ang3\Bundle\AwsPollyBundle\Service\SpeechSynthesizer
+    public: true
