@@ -2,14 +2,11 @@
 
 declare(strict_types=1);
 
-/*
- * This file is part of neosolva/app-agrege.
- * This source file is owned by NEOSOLVA INFORMATIQUE.
- */
-
 $header = <<<'EOF'
-    This file is part of neosolva/app-agrege.
-    This source file is owned by NEOSOLVA INFORMATIQUE.
+    This file is part of package ang3/aws-polly-bundle
+    
+    This source file is subject to the MIT license that is bundled
+    with this source code in the file LICENSE.
     EOF;
 
 $finder = PhpCsFixer\Finder::create()
