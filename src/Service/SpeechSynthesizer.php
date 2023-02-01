@@ -17,8 +17,7 @@ class SpeechSynthesizer
         private readonly PollyClient $pollyClient,
         private readonly string $defaultRegion,
         private readonly string $defaultEngine
-    )
-    {
+    ) {
     }
 
     /**
