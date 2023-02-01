@@ -36,13 +36,14 @@ of the Composer documentation.
 Step 2: Configure the bundle
 ----------------------------
 
+**Make sure you have configured the bundle AsyncAws, especially for authentication.**
+
 Create the file `config/packages/ang3_aws_polly.yaml`, and add the contents below:
 
 ```yaml
 # config/packages/ang3_aws_polly.yaml
 ang3_aws_polly:
   region: 'YOUR_REGION'
-###< ang3/aws-polly-bundle ###
 ```
 
 Make sure to replace `YOUR_REGION` by your AWS settings.
