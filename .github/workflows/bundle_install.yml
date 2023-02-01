@@ -1,0 +1,30 @@
+name: Bundle installation
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  phpunit_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.1'
+          #extensions: dom, curl, libxml, mbstring
+      - uses: actions/checkout@v3
+      - name: Create new project
+        run: |
+          mkdir bundle
+          mv ./* bundle/*
+          composer create-project symfony/skeleton:"6.2.*" app
+      - name: Bundle installation
+        run: |
+          cd app
+          composer config repositories.bundle path "../bundle"
+          composer update
+          composer require ang3/aws-polly-bundle "*"
+          cd ..
+      - name: Clear cache
+        run: php bin/console cache:clear
