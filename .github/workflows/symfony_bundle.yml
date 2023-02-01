@@ -28,4 +28,6 @@ jobs:
           composer require ang3/aws-polly-bundle "*"
           cd ..
       - name: Clear cache
-        run: php bin/console cache:clear
+        run: |
+          cd app
+          php bin/console cache:clear
