@@ -17,7 +17,8 @@ jobs:
       - name: Create new project
         run: |
           mkdir bundle
-          mv ./* bundle
+          shopt -s extglob dotglob
+          mv !(bundle) bundle
           composer create-project symfony/skeleton:"6.2.*" app
       - name: Bundle installation
         run: |
