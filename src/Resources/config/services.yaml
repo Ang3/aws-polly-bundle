@@ -12,8 +12,8 @@ services:
   Aws\Polly\PollyClient:
     arguments:
       -
-        version: '%env(resolve:AWS_POLLY_VERSION)%'
-        region: '%env(resolve:AWS_POLLY_REGION)%'
+        version: '%ang3.aws_polly.version%'
+        region: '%ang3.aws_polly.region%'
         credentials:
           key: '%env(AWS_ACCESS_KEY_ID)%'
           secret: '%env(AWS_SECRET_ACCESS_KEY)%'
@@ -24,8 +24,7 @@ services:
   # Speech synthesizer
   Ang3\Bundle\AwsPollyBundle\Service\SpeechSynthesizer:
     arguments:
-      $defaultRegion: '%env(AWS_POLLY_DEFAULT_REGION)%'
-      $defaultEngine: '%env(AWS_POLLY_DEFAULT_ENGINE)%'
+      $region: '%ang3.aws_polly.region%'
   ang3.aws_polly.speech_synthesizer:
     alias: Ang3\Bundle\AwsPollyBundle\Service\SpeechSynthesizer
     public: true
