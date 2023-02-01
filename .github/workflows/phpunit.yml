@@ -1,4 +1,4 @@
-name: PHPUnit tests suite
+name: PHPUnit tests
 
 on: [push, pull_request]
 
