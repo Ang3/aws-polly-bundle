@@ -1,4 +1,4 @@
-name: Bundle installation
+name: Symfony Bundle
 
 on: [push, pull_request]
 
