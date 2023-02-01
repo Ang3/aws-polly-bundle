@@ -2,8 +2,8 @@ AWS Polly bundle
 ================
 
 [![Code Quality](https://github.com/Ang3/aws-polly-bundle/actions/workflows/php_lint.yml/badge.svg)](https://github.com/Ang3/aws-polly-bundle/actions/workflows/php_lint.yml)
-[![Symfony Bundle](https://github.com/Ang3/aws-polly-bundle/actions/workflows/symfony_bundle.yml/badge.svg)](https://github.com/Ang3/aws-polly-bundle/actions/workflows/symfony_bundle.yml)
 [![PHPUnit Tests](https://github.com/Ang3/aws-polly-bundle/actions/workflows/phpunit.yml/badge.svg)](https://github.com/Ang3/aws-polly-bundle/actions/workflows/phpunit.yml)
+[![Symfony Bundle](https://github.com/Ang3/aws-polly-bundle/actions/workflows/symfony_bundle.yml/badge.svg)](https://github.com/Ang3/aws-polly-bundle/actions/workflows/symfony_bundle.yml)
 [![Latest Stable Version](https://poser.pugx.org/ang3/aws-polly-bundle/v/stable)](https://packagist.org/packages/ang3/aws-polly-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/ang3/aws-polly-bundle/v/unstable)](https://packagist.org/packages/ang3/aws-polly-bundle)
 [![Total Downloads](https://poser.pugx.org/ang3/aws-polly-bundle/downloads)](https://packagist.org/packages/ang3/aws-polly-bundle)
