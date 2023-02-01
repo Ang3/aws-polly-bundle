@@ -1,7 +1,8 @@
 AWS Polly bundle
 ================
 
-[![Build Status](https://api.travis-ci.com/Ang3/aws-polly-bundle.svg?branch=main)](https://app.travis-ci.com/github/Ang3/aws-polly-bundle)
+[![Code Quality](https://github.com/Ang3/aws-polly-bundle/actions/workflows/php_lint.yml/badge.svg)](https://github.com/Ang3/aws-polly-bundle/actions/workflows/php_lint.yml)
+[![Symfony Bundle](https://github.com/Ang3/aws-polly-bundle/actions/workflows/symfony_bundle.yml/badge.svg)](https://github.com/Ang3/aws-polly-bundle/actions/workflows/symfony_bundle.yml)
 [![Latest Stable Version](https://poser.pugx.org/ang3/aws-polly-bundle/v/stable)](https://packagist.org/packages/ang3/aws-polly-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/ang3/aws-polly-bundle/v/unstable)](https://packagist.org/packages/ang3/aws-polly-bundle)
 [![Total Downloads](https://poser.pugx.org/ang3/aws-polly-bundle/downloads)](https://packagist.org/packages/ang3/aws-polly-bundle)
