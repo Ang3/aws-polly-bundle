@@ -1,4 +1,4 @@
-name: Symfony Bundle
+name: Bundle Check
 
 on: [push, pull_request]
 
