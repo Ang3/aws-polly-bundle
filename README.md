@@ -26,7 +26,7 @@ Open a command console, enter your app directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require ang3/aws-polly-bundle
+composer require ang3/aws-polly-bundle
 ```
 
 This command requires you to have Composer installed globally, as explained
